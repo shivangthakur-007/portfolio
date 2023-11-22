@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+ /* li em{
+  color: purple;
+   font-size: 900%;
+} */
+
+em + strong{
+  font-size: 10em;
+  color: red;
+  width: calc(60% - 20px);
+  background-color: grey;
+  transform: rotate(0.8turn);
+}
+
+a:link{
+  color: pink;
+}
+
+a:visited{
+  color: darkred;
+}
+
+a:hover{
+  text-decoration: none;
+  color: green;
+}
+p{
+  color: blue;
+}
+.special{
+  color: red;
+}
