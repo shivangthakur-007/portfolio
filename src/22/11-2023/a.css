@@ -1,36 +1,36 @@
-html {
-  height: 100%;
-  width: 100%;
+body{
+  width: 640px;
+  margin: 0 auto;
 }
 
- /* li em{
-  color: purple;
-   font-size: 900%;
-} */
+.full-img{
+    position: relative;
+    display: block;
+    width: 640px;
+    height: 480px;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    background-color: #fff;
+}
+ button{
+  border: 0;
+  background-color: rgba(150, 150, 150, 0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+ }
 
-em + strong{
-  font-size: 10em;
-  color: red;
-  width: calc(60% - 20px);
-  background-color: grey;
-  transform: rotate(0.8turn);
-}
-
-a:link{
-  color: pink;
-}
-
-a:visited{
-  color: darkred;
-}
-
-a:hover{
-  text-decoration: none;
-  color: green;
-}
-p{
-  color: blue;
-}
-.special{
-  color: red;
-}
+ .thumb-bar img{
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+ }
