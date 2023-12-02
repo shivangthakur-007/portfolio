@@ -62,52 +62,6 @@
 //     a+=1;
 // }
 
-// const display = document.querySelector(".displayed-img");
-// const thumbar = document.querySelector(".thumb-bar");
-
-// const btn = document.querySelector('button');
-// const overlay= document.querySelector('.overlay');
-
-//     const pic =
-//       "https://mdn.github.io/learning-area/javascript/building-blocks/gallery/images";
-//     const images = [
-//       "pic1.jpg",
-//       "pic2.jpg",
-//       "pic3.jpg",
-//       "pic4.jpg",
-//       "pic5.jpg",
-//     ];
-//     const alts = {
-//       "pic1.jpg": "Closeup of a human eye",
-//       "pic2.jpg": "Rock that looks like a wave",
-//       "pic3.jpg": "Purple and white pansies",
-//       "pic4.jpg": "Section of wall from a pharoah's tomb",
-//       "pic5.jpg": "Large moth on a leaf",
-//     }
-
-//     for (const image of images) {
-//         const newImages = document.createElement('img')
-//         newImages.setAttribute('src', `${pic}/${image}`);
-//         newImages.setAttribute('alt', alts[image]);
-//         thumbar.appendChild(newImages);
-//         newImages.addEventListener('click', (e)=>{
-//             display.src= e.target.src;
-//             display.alt= e.target.alt;
-//         })
-//     }
-
-// btn.addEventListener('click', ()=>{
-//     const btnClass= btn.getAttribute('class');
-//     if (btnClass === 'dark') {
-//         btn.setAttribute('class', 'light')
-//         btn.textContent= 'Lighten';
-//         overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
-//     }else{
-//         btn.setAttribute("class", "dark");
-//         btn.textContent = "Darken";
-//         overlay.style.backgroundColor = "rgba(0,0,0,0)";
-//     }
-// });
 // declare @num as int = 1
 // declare @n as int = 0
 // declare @i as int = 0
@@ -151,4 +105,30 @@
 // }
 // const a= populate();
 // console.log(a)
+
+const n= document.querySelector("#name")
+const delay= document.querySelector("#delay")
+const btn= document.querySelector("button")
+const para= document.querySelector("p")
+
+    function alarm(person, delay){
+        return new Promise((res, rej)=>{
+            if(delay<0){
+                throw new error(`ALarm must not be negative` )
+            }
+            setTimeout(()=>{
+                res(`wake up : ${person}!`)
+            }, delay);
+        })
+ }
+btn.addEventListener('click', async ()=>{
+    try {
+        const message =await alarm(n.value, delay.value)
+        console.log(message)
+        para.textContent= message;
+    } catch (e) {
+        para.textContent=`Couldn't set Alarm: ${e}`;
+    }
+})
+
 
