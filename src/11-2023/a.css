@@ -1,0 +1,116 @@
+/* body{
+  width: 640px;
+  margin: 0 auto;
+}
+
+.full-img{
+    position: relative;
+    display: block;
+    width: 640px;
+    height: 480px;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    background-color: #fff;
+}
+ button{
+  border: 0;
+  background-color: rgba(150, 150, 150, 0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+ }
+
+ .thumb-bar img{
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+ } */
+html{
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+thead th, tfoot th {
+    font-family: "Rock Salt", cursive;
+}
+
+tbody, td{
+  text-align: center;
+}
+
+tfoot, th{
+  text-align: right;
+}
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 10%));
+  border: 3px solid purple;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+body{
+  background: url(./delivery-boy.png) center;
+}
+caption {
+  font-family: "Rock Salt", cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: top;
+  color: #666;
+  text-align: left;
+  letter-spacing: 1px;
+}
+table {
+  background-color: #ff33cc;
+}
+thead, tfoot{
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+th{
+  letter-spacing: 2px;
+}
+td{
+  letter-spacing: 1px;
+}
+table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid Purple;
+}
+
+thead th:nth-child(1){
+  width: 30%;
+}
+thead th:nth-child(2){
+  width: 20%;
+}
+thead th:nth-child(3){
+  width: 15%;
+}
+thead th:nth-child(4){
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+

@@ -1,4 +1,5 @@
 # table 
+- html  
     <h1>Planets Data</h1>
     <table>
       <caption>Data about the planets of our solar system (Planetary facts taken from <a href="/"> Nasa's Planetary Fact Sheet - Metric).</a></caption>
@@ -202,3 +203,39 @@
 //         overlay.style.backgroundColor = "rgba(0,0,0,0)";
 //     }
 // });
+
+# new project
+- html
+<label for="Name">Name: </label>
+    <input type="name" id="name" name="name"/>
+    <label for="delay">Delay: </label>
+    <input type="text" name="delay" id="delay">
+    <button type="submit">Set Alarm</button>
+    <p></p>
+- js
+
+const n= document.querySelector("#name")
+const delay= document.querySelector("#delay")
+const btn= document.querySelector("button")
+const para= document.querySelector("p")
+
+    function alarm(person, delay){
+        return new Promise((res, rej)=>{
+            if(delay<0){
+                throw new error(`ALarm must not be negative` )
+            }
+            setTimeout(()=>{
+                res(`wake up : ${person}!`)
+            }, delay);
+        })
+ }
+btn.addEventListener('click', async ()=>{
+    try {
+        const message =await alarm(n.value, delay.value)
+        console.log(message)
+        para.textContent= message;
+    } catch (e) {
+        para.textContent=`Couldn't set Alarm: ${e}`;
+    }
+})
+

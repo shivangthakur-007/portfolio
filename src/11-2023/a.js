@@ -106,29 +106,6 @@
 // const a= populate();
 // console.log(a)
 
-const n= document.querySelector("#name")
-const delay= document.querySelector("#delay")
-const btn= document.querySelector("button")
-const para= document.querySelector("p")
 
-    function alarm(person, delay){
-        return new Promise((res, rej)=>{
-            if(delay<0){
-                throw new error(`ALarm must not be negative` )
-            }
-            setTimeout(()=>{
-                res(`wake up : ${person}!`)
-            }, delay);
-        })
- }
-btn.addEventListener('click', async ()=>{
-    try {
-        const message =await alarm(n.value, delay.value)
-        console.log(message)
-        para.textContent= message;
-    } catch (e) {
-        para.textContent=`Couldn't set Alarm: ${e}`;
-    }
-})
 
 
